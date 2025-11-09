@@ -1,0 +1,125 @@
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+        body {
+            background-color: lightcoral;
+            text-align: center;
+            height: 100%;
+        }
+
+        main {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        .container {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game {
+            height: 60vmin;
+            width: 60vmin;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5vmin;
+            justify-content: center;
+        }
+
+        .box {
+            height: 18vmin;
+            width: 18vmin;
+            border-radius: 1rem;
+            border: none;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+            font-size: 8vmin;
+            color: aliceblue;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 60vmin;
+        }
+
+        .box:hover {
+            background-color: coral;
+        }
+
+        button {
+            padding: 1rem;
+            font-size: 1.25rem;
+            background: #191913;
+            color: lightcoral;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: white;
+        }
+
+        #msg {
+            font-size: 8vmin;
+        }
+        .msg-container {
+            height: 30vmin;
+        }
+        .hide {
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="msg-container hide"> 
+        <p id="msg">Winner</p>
+        <button id="new-btn">New game</button>
+    </div>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <div class="toolbar">
+            <button id="reset">Reset game</button>
+            <button id="undo">Undo last move</button>
+        </div>
+    </main>
+
+    <script src="ticTacToe.js"></script>
+</body>
+</html>
